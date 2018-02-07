@@ -8,6 +8,7 @@ setup(name='logbucket',
       packages=['logbucket'],
       install_requires=[
         'pymongo',
+        'dnspython',
         'paho-mqtt',
       ],
       test_suite='nose.collector',
