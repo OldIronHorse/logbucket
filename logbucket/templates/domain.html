@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Domain: {{ domain }}</h2>
+<div class="events">
+  <div class="headings">
+    <div class="heading">Timestamp</div>
+    <div class="heading">Topic</div>
+    <div class="heading">Payload</div>
+  </div>
+  {% for event in events %}
+    <div class="event">
+      <div class="timestamp">{{ event.timestamp }}</div>
+      <div class="topic">{{ event.topic[2:] }}</div>
+      <div class="payload">{{ event.payload }}</div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

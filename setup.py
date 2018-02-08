@@ -7,6 +7,7 @@ setup(name='logbucket',
       license='GPL 3.0',
       packages=['logbucket'],
       install_requires=[
+        'flask',
         'pymongo',
         'dnspython',
         'paho-mqtt',

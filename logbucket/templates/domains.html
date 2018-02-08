@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Domains</h2>
+<div class="domains">
+  {% for domain in domains %}
+    <div class="domain">
+      <a href="domains/{{ domain }}">{{ domain }}</a>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
