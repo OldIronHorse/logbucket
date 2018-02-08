@@ -6,6 +6,7 @@ import config
 
 client = MongoClient(config.DATABASE['connection_string'])
 db=client.logbucket
-events=db.events
-for event in events.find():
-  pprint(event)
+for collection in ['iot-test', 'app-log']:
+  print('#### Collection:', collection, '####')
+  for event in db[collection].find():
+    pprint(event)
