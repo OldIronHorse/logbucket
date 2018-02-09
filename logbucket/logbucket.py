@@ -5,11 +5,10 @@ from datetime import datetime, timezone
 
 import config
 
-
-
 all_payload_handlers = {
   'json': (lambda p: json.loads(p.decode('utf-8'))),
   'integer': (lambda p: int(p.decode('utf-8'))),
+  'string': (lambda p: p.decode('utf-8')),
 }
 
 domain_payload_handlers = {}
