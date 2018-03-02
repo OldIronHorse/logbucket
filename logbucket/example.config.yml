@@ -1,0 +1,13 @@
+database:
+  connection_string: <<YOUR MONGODB CONNECTION STRING>>>
+
+mqtt:
+  host: <<YOUR MQTT BROKER HOSTNAME>>
+  client_id: logbucket-dbwriter
+
+logbucket:
+  domains: 
+    iot-test:
+      payload_type: integer
+    app-log:
+      payload_type: json

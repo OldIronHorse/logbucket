@@ -1,0 +1,14 @@
+database:
+  connection_string: mongodb+srv://logbucket-app:8HbIBU3ZqsLtA0tu@notinventedhere0-iyfnr.mongodb.net/test
+  #connection_string: mongodb://logbucket-app:8HbIBU3ZqsLtA0tu@notinventedhere0-iyfnr.mongodb.net/test
+
+mqtt:
+  host: euterpe3
+  client_id: logbucket-dbwriter
+
+logbucket:
+  domains: 
+    iot-test:
+      payload_type: string
+    app-log:
+      payload_type: json
