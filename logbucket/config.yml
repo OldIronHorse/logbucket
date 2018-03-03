@@ -7,6 +7,8 @@ mqtt:
   client_id: logbucket-dbwriter
 
 logbucket:
+  logging:
+    level: info
   domains: 
     iot-test:
       payload_type: string
