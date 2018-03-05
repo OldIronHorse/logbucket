@@ -31,7 +31,9 @@ def on_message(client, userdata, message):
 def main(cfg):
   db_client = MongoClient(cfg['database']['connection_string'])
   db = db_client.logbucket
-  log.info('main: Connecting to MQTT broker %s as %s', cfg['mqtt']['host'], cfg['mqtt']['client_id'])
+  log.info('main: Connecting to MQTT broker %s as %s', 
+           cfg['mqtt']['host'], 
+           cfg['mqtt']['client_id'])
   client = mqtt.Client(cfg['mqtt']['client_id'], 
                        userdata={'db': db})
   client.connect(cfg['mqtt']['host'])
